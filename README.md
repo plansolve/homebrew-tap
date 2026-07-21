@@ -3,18 +3,23 @@
 <img src="/assets/logo.png" height="150" />
 </div>
 
-<h1 align="center">PlanSolve</h1>
+<h1 align="center">PlanSolve — Homebrew Tap</h1>
 
-A complete vehicle routing optimization solution with Quarkus backend and React frontend, featuring interactive maps and advanced scheduling.
+<p align="center">Homebrew formula for the <a href="https://github.com/plansolve/distro"><code>plansolve</code> CLI</a>.</p>
 
-<div align="center">
-<img src="/assets/screenshot.png" height="400" />
-</div>
+## 🍺 **Install**
+
+```sh
+brew tap plansolve/tap
+brew install plansolve
+```
+
+Then `brew upgrade plansolve` to update.
+
+> This repository only hosts the Homebrew formula. For all other install methods
+> (shell, PowerShell, Scoop, Cargo, direct download), see
+> [plansolve/distro](https://github.com/plansolve/distro).
 
 ## 📝 **License**
 
 This project is proprietary software. All rights reserved.
-
-## 🤝 **Support**
-
-For support and questions, please contact the development team.
