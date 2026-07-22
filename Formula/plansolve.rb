@@ -1,19 +1,19 @@
 class Plansolve < Formula
   desc "Kick-ass command-line interface for the PlanSolve optimization API."
   homepage "https://getplansolve.com"
-  version "0.25.8"
+  version "0.26.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/plansolve/distro/releases/download/rust/v0.25.8/plansolve-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "c8e73770b1d619f059e9a3b93bf28a61ff39a74bdd933af03a28750c0a521955"
-      mirror "https://github.com/plansolve/sdk/releases/download/rust/v0.25.8/plansolve-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "c8e73770b1d619f059e9a3b93bf28a61ff39a74bdd933af03a28750c0a521955"
+      url "https://github.com/plansolve/distro/releases/download/rust/v0.26.0/plansolve-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "ad9f9ed4e263dae297f3d7ca288682a31ee881504b2ea6bdba5c5502a8f6eac5"
+      mirror "https://github.com/plansolve/sdk/releases/download/rust/v0.26.0/plansolve-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "ad9f9ed4e263dae297f3d7ca288682a31ee881504b2ea6bdba5c5502a8f6eac5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/plansolve/distro/releases/download/rust/v0.25.8/plansolve-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "8e386c300786886a0b115b12869fa72f2ded1c92a839278ab096bbb736dcf049"
-      mirror "https://github.com/plansolve/sdk/releases/download/rust/v0.25.8/plansolve-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "8e386c300786886a0b115b12869fa72f2ded1c92a839278ab096bbb736dcf049"
+      url "https://github.com/plansolve/distro/releases/download/rust/v0.26.0/plansolve-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "cd0cb5e6c3db329c9edcfffba9adba5e8b0813c5699be05223f49f6bbe81fec4"
+      mirror "https://github.com/plansolve/sdk/releases/download/rust/v0.26.0/plansolve-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "cd0cb5e6c3db329c9edcfffba9adba5e8b0813c5699be05223f49f6bbe81fec4"
     end
   end
   license "Apache-2.0"
