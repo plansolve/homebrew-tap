@@ -1,19 +1,19 @@
 class Plansolve < Formula
   desc "Kick-ass command-line interface for the PlanSolve optimization API."
   homepage "https://getplansolve.com"
-  version "0.27.0"
+  version "0.28.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/plansolve/distro/releases/download/rust/v0.27.0/plansolve-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "19e862dde4d1702f35688f5daf2358f17fc8bf2f4173506c69ef199d5ca9b1ce"
-      mirror "https://github.com/plansolve/sdk/releases/download/rust/v0.27.0/plansolve-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "19e862dde4d1702f35688f5daf2358f17fc8bf2f4173506c69ef199d5ca9b1ce"
+      url "https://github.com/plansolve/distro/releases/download/rust/v0.28.0/plansolve-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "58ebb012c412d7f91e1b3f34fd46cf4fdb5166bf724f0ae899188333d1e1f4c6"
+      mirror "https://github.com/plansolve/sdk/releases/download/rust/v0.28.0/plansolve-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "58ebb012c412d7f91e1b3f34fd46cf4fdb5166bf724f0ae899188333d1e1f4c6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/plansolve/distro/releases/download/rust/v0.27.0/plansolve-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "1e40b161c006aaed5111c7ad06f61d38b95f5d29ec497816eb6b66fbc804948a"
-      mirror "https://github.com/plansolve/sdk/releases/download/rust/v0.27.0/plansolve-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "1e40b161c006aaed5111c7ad06f61d38b95f5d29ec497816eb6b66fbc804948a"
+      url "https://github.com/plansolve/distro/releases/download/rust/v0.28.0/plansolve-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "ba51a25ba50691dff82fbd19d1fd3e94a14b395f73f97fbb11991331b44cb26a"
+      mirror "https://github.com/plansolve/sdk/releases/download/rust/v0.28.0/plansolve-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "ba51a25ba50691dff82fbd19d1fd3e94a14b395f73f97fbb11991331b44cb26a"
     end
   end
   license "Apache-2.0"
@@ -40,8 +40,12 @@ class Plansolve < Formula
   end
 
   def install
-    bin.install "plansolve" if OS.mac? && Hardware::CPU.arm?
-    bin.install "plansolve" if OS.mac? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "plansolve"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "plansolve"
+    end
 
     install_binary_aliases!
 
